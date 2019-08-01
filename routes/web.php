@@ -26,5 +26,8 @@ Route::get('/services', 'HomeController@services');
 Route::get('/contact', 'HomeController@contact');
 
 // Backend Route Start //
-Route::get('/admin', 'DashboardController@index');
-Route::resource('admin/userprofile', 'UserProfile');
+//Route::get('/admin', 'DashboardController@index');
+//Route::resource('admin/userprofile', 'UserProfile');
+Auth::routes();
+
+Route::get('/admin', 'HomeController@index');
