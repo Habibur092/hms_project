@@ -11,20 +11,23 @@
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return view('welcome');
+});
 
 //Frontend Route Start//
-Route::get('/', 'HomeController@index');
-Route::get('/about', 'HomeController@about_us');
-Route::get('/accomodation', 'HomeController@accomodation');
-Route::get('/gallery', 'HomeController@gallery');
-Route::get('/blog', 'HomeController@blog');
-Route::get('/blog_details', 'HomeController@blog_details');
-Route::get('/services', 'HomeController@services');
-Route::get('/contact', 'HomeController@contact');
+// Route::get('/', 'HomeController@index');
+// Route::get('/about', 'HomeController@about_us');
+// Route::get('/accomodation', 'HomeController@accomodation');
+// Route::get('/gallery', 'HomeController@gallery');
+// Route::get('/blog', 'HomeController@blog');
+// Route::get('/blog_details', 'HomeController@blog_details');
+// Route::get('/services', 'HomeController@services');
+// Route::get('/contact', 'HomeController@contact');
 
 // Backend Route Start //
-Route::get('/admin', 'DashboardController@index');
-Route::resource('admin/userprofile', 'UserProfile');
+// Route::get('/admin', 'DashboardController@index');
+// Route::resource('admin/userprofile', 'UserProfile');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
