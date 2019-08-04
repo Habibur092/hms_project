@@ -26,8 +26,16 @@ Route::get('/', function () {
 // Route::get('/contact', 'HomeController@contact');
 
 // Backend Route Start //
+<<<<<<< HEAD
 // Route::get('/admin', 'DashboardController@index');
 // Route::resource('admin/userprofile', 'UserProfile');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+=======
+//Route::get('/admin', 'DashboardController@index');
+//Route::resource('admin/userprofile', 'UserProfile');
+Auth::routes();
+
+Route::get('/admin', 'HomeController@index');
+>>>>>>> f0e9bd9f32f30bd1de12bacc1d922581f029719f
